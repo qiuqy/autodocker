@@ -13,8 +13,8 @@ jobs:
       with:
         login-server: registry.cn-shenzhen.aliyuncs.com/autoyun/autoimages # 务必正确填写镜像容器服务的登录地址
         region-id: cn-shenzhen # 务必正确填写镜像容器服务的登录地址
-        username: "${{ secrets.Username }}" # 引用GitHub repo设置的镜像容器服务用户名
-        password: "${{ secrets.Password }}" # 引用GitHub repo设置的镜像容器服务密码
+        username: "${{ secrets.USERNAME }}" # 引用GitHub repo设置的镜像容器服务用户名
+        password: "${{ secrets.PASSWORD}}" # 引用GitHub repo设置的镜像容器服务密码
     - name: Build and Push Docker Image
       env:
         IMAGE_TAG: ${{ github.sha }} # 用于标记容器版本号
