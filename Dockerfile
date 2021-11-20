@@ -1,6 +1,4 @@
 FROM centos
- 
-RUN ping -c 1 www.baidu.com
 RUN yum -y install gcc make pcre-devel zlib-devel tar zlib
 ADD nginx-1.15.2.tar.gz /usr/src/
 RUN cd /usr/src/nginx-1.15.2 \
